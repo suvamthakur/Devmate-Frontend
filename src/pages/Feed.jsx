@@ -28,7 +28,11 @@ function Feed() {
         {/* {feedUsers.map((user) => (
           <UserCard userDetails={user} />
         ))} */}
-        <UserCard userDetails={feedUsers[0]} />
+        {feedUsers.length > 0 ? (
+          <UserCard userDetails={feedUsers[0]} />
+        ) : (
+          <h1 className="text-center">No new users found</h1>
+        )}
       </div>
     )
   );

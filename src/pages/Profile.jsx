@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 
 function Profile() {
   const user = useSelector((store) => store.user);
+
+  console.log("/profile");
   return (
     user && (
       <div>

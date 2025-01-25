@@ -23,9 +23,13 @@ function Navbar() {
   return (
     <div className="navbar bg-base-300">
       <div className="flex-1">
-        <Link to={"/"} className="btn btn-ghost text-xl">
-          Devmate
-        </Link>
+        {user ? (
+          <Link to={"/"} className="btn btn-ghost text-xl">
+            Devmate
+          </Link>
+        ) : (
+          <button className="btn btn-ghost text-xl">Devmate</button>
+        )}
       </div>
       {user && (
         <div className="flex-none gap-2">

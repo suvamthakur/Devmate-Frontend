@@ -17,9 +17,9 @@ const EditProfile = ({ user }) => {
   const dispatch = useDispatch();
   const [showToast, setShowToast] = useState(false);
 
+  console.log("Edit profile");
+
   const saveProfile = async () => {
-    //Clear Errors
-    setError("");
     try {
       const res = await axiosFetch.patch(constants.EDIT_PROFILE, {
         firstName,
@@ -31,6 +31,8 @@ const EditProfile = ({ user }) => {
       });
       dispatch(addUser(res?.data?.data));
       setShowToast(true);
+
+      setError("");
 
       setTimeout(() => {
         setShowToast(false);
@@ -100,6 +102,7 @@ const EditProfile = ({ user }) => {
                     className="p-3 bg-base-100 rounded-md"
                     onChange={(e) => setGender(e.target.value)}
                   >
+                    <option value="">Please select gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Others</option>

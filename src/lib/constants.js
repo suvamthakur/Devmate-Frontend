@@ -1,4 +1,5 @@
 export default {
+  SIGNUP: "user/signup",
   LOGIN: "user/login",
   LOGOUT: "user/logout",
   GET_PROFILE: "profile/details",
@@ -7,4 +8,5 @@ export default {
   GET_CONNECTIONS: "user/connections",
   REVIEW_REQUEST: "request/review",
   FETCH_REQUESTS: "user/requests/received",
+  SEND_REQUEST: "request/send",
 };

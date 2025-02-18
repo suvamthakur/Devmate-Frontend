@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosFetch = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "/api/", // here /api is relative path. because frontend and backend are hosted on same ip
   withCredentials: true,
 });
